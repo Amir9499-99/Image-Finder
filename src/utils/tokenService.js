@@ -6,6 +6,7 @@ function setToken(token) {
       localStorage.removeItem('token');
     } 
   }
+  
 function getToken() {
 let token = localStorage.getItem('token');
 if (token) {
