@@ -1,3 +1,5 @@
+const API = "https://wallhaven.cc/search?q=";
+const params = "&categories=111&purity=110&sorting=relevance&order=desc&page=1";
 const fetch = require("node-fetch");
 
 module.exports = {
@@ -5,10 +7,14 @@ module.exports = {
 };
 
 async function search(req, res) {
-  res.send("This is" + req.body);
-  // fetch(API + this.state.searchResult + params)
-  //     .then((res) => {
-  //       if (res.ok) return res.json()
-  //       throw new Error("Bad Call")})
-  //     .then((data) => console.log(data));
+  console.log(req.body.term);
+  fetch(API + req.body.term + params)
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error("Bad Call");
+    })
+    .then((data) => {
+      console.log(data);
+      res.json({ data });
+    });
 }
