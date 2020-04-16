@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import searchApi from "../../utils/searchService";
+import "./index.css";
 
-// const API = "https://wallhaven.cc/api/v1/search?q=";
-// const params = "&categories=100&purity=110&sorting=relevance&order=desc&page=1";
-
-class HomePage extends Component {
+export default class HomePage extends Component {
   state = {
     searchResult: "",
+    result: [],
   };
 
   handleChange = (e) => {
@@ -15,18 +14,31 @@ class HomePage extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await searchApi(this.state.searchResult);
-    console.log(result);
+    const result = await searchApi.searchApi(this.state.searchResult);
+    this.setState({ result: result });
+    console.log("this is result", this.state.result);
+  };
+
+  imageList = () => {
+    const resultsArray = this.state.result;
+    console.log("resultsArray: ", resultsArray);
+    const resultsMapped = resultsArray.map((img) => {
+      let src = img.short_url;
+      console.log(src);
+      return <img key={src} src={src}></img>;
+    });
+    return resultsMapped;
   };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" onChange={this.handleChange} />
-        <input type="submit" value="Submit" />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" onChange={this.handleChange} />
+          <input type="submit" value="Submit" />
+        </form>
+        <div className="">Here result.. {this.imageList()}</div>
+      </div>
     );
   }
 }
-
-export default HomePage;
