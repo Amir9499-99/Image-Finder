@@ -1,7 +1,6 @@
 const BASE_URL = "/api/search/";
 
 export default async function searchApi(term) {
-  console.log("Hitting servise" + term);
   const results = await fetch(BASE_URL + "search", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

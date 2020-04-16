@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import searchApi from "../../utils/searchService";
 
-const API = "https://wallhaven.cc/api/v1/search?q=";
-const params = "&categories=100&purity=110&sorting=relevance&order=desc&page=1";
+// const API = "https://wallhaven.cc/api/v1/search?q=";
+// const params = "&categories=100&purity=110&sorting=relevance&order=desc&page=1";
 
 class HomePage extends Component {
   state = {
-    searchResult: '',
+    searchResult: "",
   };
 
   handleChange = (e) => {
@@ -16,6 +16,7 @@ class HomePage extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     const result = await searchApi(this.state.searchResult);
+    console.log(result);
   };
 
   render() {
