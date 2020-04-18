@@ -11,7 +11,7 @@ function search(req, res) {
   fetch(API + req.body.term + params)
     .then((res) => res.json())
     .then((data) => {
-      console.log("this is data", data);
+      // console.log("this is data", data);
       res.status(200).json(data);
     })
     .catch((err) => console.log(err));

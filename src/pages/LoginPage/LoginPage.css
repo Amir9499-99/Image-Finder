@@ -1,0 +1,19 @@
+.form-control{
+    background-color: white;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.form-group{
+    margin: 1px;
+    border-radius: 4px;
+    margin: 10px; 
+}
+
+.col-sm-12 TextField label{ 
+    color: white;
+}
+
+.LoginPage{
+    margin-top: 5%;
+}

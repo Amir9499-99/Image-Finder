@@ -1,9 +1,13 @@
+import tokenService from './tokenService';
 const BASE_URL = "/api/search/";
 
 async function searchApi(term) {
   return await fetch(BASE_URL + "search", {
     method: "POST",
-    headers: new Headers({ "Content-Type": "application/json" }),
+    headers: {
+      "Content-type": "application/json",
+      Authorization: "Bearer " + tokenService.getToken(),
+    },
     body: JSON.stringify({ term }),
     mode: "cors",
   })
@@ -12,7 +16,6 @@ async function searchApi(term) {
       throw new Error("Error from Api path!");
     })
     .then((data) => {
-      console.log(data.data);
       return data.data;
     });
 }
