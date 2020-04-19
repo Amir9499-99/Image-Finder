@@ -1,6 +1,8 @@
 body {
   font-family: "Markazi Text", serif;
   background-color: black;
+  text-align: center;
+  align-items: center;
   /* background-image: url("https://image.freepik.com/free-photo/empty-wooden-table-with-smoke-float-up-dark-background_68495-135.jpg"); */
   /* background-repeat: no-repeat; */
 }

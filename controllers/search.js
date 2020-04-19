@@ -1,5 +1,5 @@
 const API = "https://wallhaven.cc/api/v1/search?q=";
-const params = "&categories=111&purity=110&sorting=relevance&order=desc&page=1";
+const params = "&categories=111&purity=110&sorting=relevance&order=desc&page=2&seed=[a-zA-Z0-9]{6}";
 const fetch = require("node-fetch");
 
 module.exports = {

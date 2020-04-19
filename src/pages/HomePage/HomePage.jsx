@@ -32,13 +32,7 @@ export default class HomePage extends Component {
       return (
         <div className="image-div">
           <img key={x} src={src}></img>
-          <button
-            className="save-button"
-            onClick={(e) => {
-              this.props.handleSubmitFavorite(e, src);
-            }}
-          >
-            
+          <button className="save-button" onClick={(e) => { this.props.handleSubmitFavorite(e, src); }}>
             Save Image
           </button>
         </div>
@@ -51,11 +45,8 @@ export default class HomePage extends Component {
     return (
       <div>
         <form onSubmit={this.props.handleSubmit} className="search-form">
-          <input
-            className="search-bar"
-            type="text"
-            onChange={this.props.handleChange}
-          />
+          <h2> Browse for your image </h2>
+          <input className="search-bar" type="text" onChange={this.props.handleChange} />
           <input className="search-button" type="submit" value="Search" />
         </form>
         <div className="image-list">{this.imageList()}</div>
