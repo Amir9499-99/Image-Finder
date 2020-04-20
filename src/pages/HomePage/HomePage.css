@@ -1,16 +1,16 @@
 .image-list {
   width: 100%;
   height: 100%;
-  margin: 8%
+  margin: 8%;
+  align-items: center;
 }
 
 .image-list img {
   width: 320px;
   height: 300px;
-  margin: 20px 0 0 0;
+  margin: 20px auto;
   border-radius: 4px;
   float: left;
-  
 }
 
 .image-list button {
@@ -37,7 +37,8 @@
 }
 
 .search-form {
-  margin-top: 60px;
+  margin-top: 80px;
+  height: 150px;
 }
 
 .save-button {
@@ -45,7 +46,7 @@
   border-radius: 3px;
   font-size: 15px;
   position: absolute;
-  top: 95%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -60,11 +61,11 @@
   position: relative;
   display: inline;
   float: left;
-  margin: 0;
+  margin: 5px 5px;
 }
 
-h2{
+.home-text{
   color: white;
   font-family: "Markazi Text", serif;
-  
+  font-size: 30px;
 }

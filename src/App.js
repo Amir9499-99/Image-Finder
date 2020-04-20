@@ -31,7 +31,16 @@ class App extends Component {
 
   handleLogout = () => {
     userService.logout();
-    this.setState({ user: null });
+    this.setState({
+      user: null,
+      searchResult: [],
+      results: [],
+    });
+  };
+
+  handleRemoveFavorite = async (e, src) => {
+    const favorite = await favoriteList.removeFavorite(e._id);
+    this.setState({ favorites: favorite });
   };
 
   handleSignupOrLogin = async () => {
@@ -42,7 +51,7 @@ class App extends Component {
   componentDidMount = async () => {
     let favorites = await favoriteList.getMyfavorites();
     this.setState({ favorites });
-    console.log(favorites);
+    // console.log(favorites);
   };
 
   handleSubmitFavorite = async (e, src) => {
@@ -103,6 +112,8 @@ class App extends Component {
                 user={this.state.user}
                 favoriteImage={this.state.favoriteImage}
                 favorites={this.state.favorites}
+                handleRemoveFavorite={this.handleRemoveFavorite}
+                user={this.state.user}
               />
             )}
           />

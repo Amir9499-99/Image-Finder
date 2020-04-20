@@ -8,59 +8,34 @@ class FavoritePage extends Component {
     favoriteList: [],
     loaded: false,
     favorites: this.props.favorites,
+    user: this.props.user,
   };
 
   componentDidMount = async () => {
     console.log("hittin favorite page componentdidmount");
     let result = await this.props.favorites;
     this.setState({ favorites: result, loaded: true });
-    await this.handleFavoriteList();
-    console.log("this is state from favorite", this.state.favorites);
-  };
-
-  handleFavoriteList = async () => {
-    if (this.state.loaded) {
-      let user = this.props.user;
-      // let result = await this.props.favoriteImage;
-      console.log(this.props.favoriteList);
-      let resultMapped = await this.props.favorites.map((e, idx) => {
-        console.log("this is e", e);
-        return (
-          <div className="image-div">
-            <img key={idx} src={e.url}></img>
-            <button className="delete-button"
-              onClick={(e) => {
-                alert("deleteeeee");
-              }}
-            >
-              Delete Image
-            </button>
-          </div>
-        );
-      });
-    } else {
-      return <h1> ...Loading </h1>;
-    }
   };
 
   render() {
     return (
       <div className="image-list">
-        <div >
+      <p className="favorite-text"> MY FAVORITE IMAGES</p>
         {this.props.favorites.map((e, idx) => {
           return (
             <div className="image-div">
               <img key={idx} src={e.url} />
-              <button onClick={(e) => alert("Delete it")}>
+              <button
+                className="save-button"
+                onClick={() => this.props.handleRemoveFavorite(e)}
+              >
                 Delete Image
               </button>
             </div>
           );
         })}
-        </div>
       </div>
     );
-    // return <div>{this.handleFavoriteList()}</div>;
   }
 }
 

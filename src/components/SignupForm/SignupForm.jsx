@@ -29,8 +29,10 @@ class SignupForm extends Component {
 
   render() {
     return (
+      
       <form className="form-horizontal" onSubmit={this.handleSubmit}>
       <div className="SignupForm">
+      <header className="header-footer">Sign Up</header>
         <div className="form-group">
           <div className="col-sm-12">
             <TextField

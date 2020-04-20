@@ -15,5 +15,12 @@
 }
 
 .LoginPage{
-    margin-top: 5%;
+    margin-top: 2%;
+    display: absolute;
+    
+}
+
+.header-footer{
+    color: white;
+    font-size: 30px;
 }

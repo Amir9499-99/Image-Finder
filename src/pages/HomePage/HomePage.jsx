@@ -45,7 +45,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <form onSubmit={this.props.handleSubmit} className="search-form">
-          <h2> Browse for your image </h2>
+          <p className="home-text"> FIND YOUR DESIRED IMAGE </p>
           <input className="search-bar" type="text" onChange={this.props.handleChange} />
           <input className="search-button" type="submit" value="Search" />
         </form>
