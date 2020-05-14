@@ -1,24 +1,23 @@
-## Image Finder
+## HELP OUT!
 
-This web application is developed to find desired images in a high quality.
+This web application is developed for a community where you can be volunteer, help by offering services to the community or if you need help, you can look for assistance or make a request support with a goods and supplies.
 
 # Technologies Used:
 
-MERN stack - JavaScipt, React, Node.js, Express.js, Mongoose/MongoDB - JSON, JWT, HTML, CSS, MATERIAL-UI
+MERN stack - JavaScipt, React, Node.js, Express.js, Socket.io, Mongoose/MongoDB - JSON, JWT, HTML, CSS, MATERIAL-UI
 
 # Page Preview
 
-<img src="https://i.imgur.com/OYNgSWY.png" width="400">
-<img src="https://i.imgur.com/WMmf8LZ.png" width="400">
-<img src="https://i.imgur.com/ZM7aap5.png" width="400">
-<img src="https://i.imgur.com/dbiSEbe.jpg" width="400">
+<img src="https://i.imgur.com/soGL3o7.jpg" width="400">
+<img src="https://i.imgur.com/okDKzPV.png" width="400">
+<img src="https://i.imgur.com/mSkOnMg.png" width="400">
+<img src="https://i.imgur.com/VJSq4ZS.png" width="400">
+<img src="https://i.imgur.com/4fcoeCN.png" width="400">
 
 # Additions To Be Made (icebox)
 
-Responsive UI,like functionality, filter images(most recent, most liked)
+Responsive UI,create a post, like a post, filter, direct message and etc.
 
 # Links
 
-Link to <a href="https://thawing-ridge-10120.herokuapp.com/">website</a>
-Link to <a href="https://github.com/Amir9499-99/MERN-Stack">Github</a>
-Link to <a href="https://trello.com/b/dmdzpdsz/project-4">Trello</a>
+Link to <a href="https://support-this.herokuapp.com/">website</a>
